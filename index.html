@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Vault - Data Group Manager</title>
+    <meta name="description" content="Track and query your numeric sets with ease.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="container">
+        <header>
+            <h1>Number Vault</h1>
+            <p>Record, manage, and smartly query your numeric sets</p>
+            <div class="action-buttons">
+                <button id="export-btn" class="secondary-btn">Export Data</button>
+                <button id="import-btn" class="secondary-btn">Import Data</button>
+                <input type="file" id="import-input" accept=".json" style="display: none;">
+            </div>
+        </header>
+
+        <main>
+            <section class="glass-panel" id="add-section">
+                <h2>Add Numbers</h2>
+                <div class="input-group">
+                    <input type="text" id="add-input" placeholder="e.g. 15 23 37" autocomplete="off">
+                    <button id="add-btn">Add Record</button>
+                </div>
+            </section>
+
+            <section class="glass-panel" id="query-section">
+                <h2>Query Numbers</h2>
+                <div class="input-group">
+                    <input type="text" id="query-input" placeholder="Search e.g. 15 37" autocomplete="off">
+                </div>
+            </section>
+
+            <section class="glass-panel results-section">
+                <div class="results-header">
+                    <h2>Records</h2>
+                    <span id="record-count">0 matching</span>
+                </div>
+                <div id="records-list" class="records-grid">
+                    <!-- Records will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
